@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-creator": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/agent-creator/SKILL.md",
+      "computedHash": "6b72ab83c20ba8d845b8f3b66f7e709a8f509cc18d4f1747fc3edb101793f584"
+    },
+    "animated-landing-pages": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/animated-landing-pages/SKILL.md",
+      "computedHash": "72746599c5c5f892d35b56f510ac02e5d19cd1d1f178a4955a602dc743b9a4e2"
+    },
+    "book-sft-pipeline": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/book-sft-pipeline/SKILL.md",
+      "computedHash": "10f45507933266beeacca5af88564a24296b8d09b467220257de9abc9ff9c6e9"
+    },
+    "bootstrap-project-context": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/bootstrap-project-context/SKILL.md",
+      "computedHash": "4360c5dfafc54916bfc4cf4c1a94e701836d248760f301a3171360454fc27b23"
+    },
+    "compounding": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/compounding/SKILL.md",
+      "computedHash": "c37b71f13462b000c5d9fea2207315aa5abef5602779e48b56a2202889b4171a"
+    },
+    "concept-game-builder": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/concept-game-builder/SKILL.md",
+      "computedHash": "c796b6b90d37dd3290f338f9f9597b830f7d8c58cac301c8a6008b4246a84ccd"
+    },
+    "debugging": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/debugging/SKILL.md",
+      "computedHash": "19d0d5113d8b9d8ffef9d51c6878901920363c4f31488543cba99c8663afa7eb"
+    },
+    "dream": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/dream/SKILL.md",
+      "computedHash": "f2828ffbde3ded43259ccfda8985b234dd21fc109cf848f76ee25322ba202a51"
+    },
+    "executing": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/executing/SKILL.md",
+      "computedHash": "d9bfbfd4ad9c5253b3d9d0504eb12b92a4ef49a19ff313dfe1e1fa5b5f376768"
+    },
+    "exploring": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/exploring/SKILL.md",
+      "computedHash": "6bd9ec4f267dbe4c695298c1714e6faa8b3be5585fce86acbf076702bbfb4804"
+    },
+    "gkg": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/gkg/SKILL.md",
+      "computedHash": "27ffb7ceea8b8f1ab921b36683af44898605a42847c4f2050b46128bbada98da"
+    },
+    "goal-griller": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/goal-griller/SKILL.md",
+      "computedHash": "f07787f049e403c283dd5a0245305959ca95c79ce9ef86bfbd366da1a2df6399"
+    },
+    "planning": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/planning/SKILL.md",
+      "computedHash": "abc1488f211e7550df4aa0082fbaf96ad9a58261fefcacd9d2d9ac732b825a05"
+    },
+    "prompt-leverage": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/prompt-leverage/SKILL.md",
+      "computedHash": "ee03c90625a94e7bf03176eb19958a44038d09fb263074bcf4eee552b6cc3e66"
+    },
+    "refresh-project-docs": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/refresh-project-docs/SKILL.md",
+      "computedHash": "608ccdb78c73888fc94799ca21ded7665613432a804646c3a2896af1d1698d34"
+    },
+    "reviewing": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/reviewing/SKILL.md",
+      "computedHash": "08f25bc50bef5961e36d46a07fb6d641462e34d0935d28834ae3fc2e270fd103"
+    },
+    "smart-commits": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/smart-commits/SKILL.md",
+      "computedHash": "cce9f41442460f3c22ab037ab6effb17e599c9d02283bf5dd86468920cdcae90"
+    },
+    "swarming": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/swarming/SKILL.md",
+      "computedHash": "30ce74efee645040b552639e04e299f649aa4c98325a37f8c56e0534fb86db3c"
+    },
+    "using-khuym": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/using-khuym/SKILL.md",
+      "computedHash": "e9a82a358bb78e81bcbd7ca6309937b20299454cc41d318bc57ff0c4d80f114d"
+    },
+    "validating": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/validating/SKILL.md",
+      "computedHash": "2b1317a0f951386250a8f08e696a87b3aac62a8780656c1871ad9e4d2625e136"
+    },
+    "visual-learner": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/visual-learner/SKILL.md",
+      "computedHash": "649df2eea3f7f015dd5f40156c6788374143042178809d36260c95aaac6b5ddf"
+    },
+    "writing-khuym-skills": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/writing-khuym-skills/SKILL.md",
+      "computedHash": "a53f6450214bfc13e1fbab52664cfa1a8447306e8486aae5c13b5c34a9e35ed9"
+    },
+    "xia": {
+      "source": "hoangnb24/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/khuym/skills/xia/SKILL.md",
+      "computedHash": "bd6e3fe6213e85b42fb59d9d1b9da17ff2e093d9fb18b46d6f6a0a39f458301c"
+    }
+  }
+}
