@@ -16,7 +16,19 @@ structure is healthier than fake product truth.
 
 - `GDD_OUTLINE.md` - Khung GDD 300–500 trang (7 volume); Part I–III viết sẵn, IV–X mục lục.
 
-- `GAME_MASTER_PLAN.md` - **Kế hoạch đầy đủ** (~72 story, AC, ma trận feature, rủi ro, lịch, D1–D10) — **đọc trước khi code**.
+- `GAME_PLAN_RESEARCH_AND_GAPS.md` - Nghiên cứu Nook/Steam, gap 25 module, art gates, DoR (~90% pre-prod).
+
+- `GAME_MASTER_PLAN.md` - Kế hoạch v1.1 (~76 story, moisture trong VS1).
+
+- `MILESTONE_DEEP_SPEC.md` - AC chi tiết M0–M3 + US-M2-10/11/12, M3-11/12.
+
+- `GAME_SPRINT_PLAN.md` - 32 sprint (2 tuần) S01→S32.
+
+- `GAME_BALANCE_SPEC.md` - Moisture, wilt, growth minutes, offline cap.
+
+- `CONTENT_SCHEMA_INDEX.md` - SO / save field dictionary.
+
+- `GDD_VOL_01_EXPERIENCE.md` - GDD Vol 1: FTUE, loops, personas.
 
 - `GAME_DEVELOPMENT_PLAN.md` - Tóm tắt một trang + link master plan.
 

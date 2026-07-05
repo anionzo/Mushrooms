@@ -5,10 +5,11 @@
 | **Sản phẩm** | Desktop idle simulation — hệ sinh thái nấm trên Windows (không clone) |
 | **Stack** | Unity 6 LTS, C#, URP 2D, JSON save, Addressables, ScriptableObjects, Win32 |
 | **Repo harness** | `E:\CODE\Game\Mushrooms` (docs, stories, decisions) |
-| **Repo Unity** | Tách riêng — working title `MushroomDesktop` (path bạn chốt) |
+| **Repo Unity** | `Mushrooms/` monorepo (ADR `docs/decisions/0008-desktop-garden-monorepo-unity6.md`) |
+| **Product** | **Desktop Garden** (working title) |
 | **Kiến trúc** | `DESKTOP_IDLE_SIM_ARCHITECTURE.md` |
-| **Cài Unity** | `UNITY_SETUP.md` |
-| **Trạng thái plan** | Draft for review — **chưa bắt implementation** |
+| **Plan v1.1** | + `GAME_PLAN_RESEARCH_AND_GAPS.md`, `MILESTONE_DEEP_SPEC.md`, `GAME_SPRINT_PLAN.md`, `GAME_BALANCE_SPEC.md` |
+| **Trạng thái plan** | **Pre-production ~90%** — chờ approve vision; **chưa M0 code** |
 
 ---
 
@@ -84,13 +85,12 @@ Phase 0 → M0 → M2 → M3  ═══ VS1
 
 ### VS1 — Vertical Slice v1 (bắt buộc trước M1)
 
-- 1–3 plot, **≥1 species**, 3–4 growth stages.  
-- Time sim + **offline progress** (có cap).  
-- Harvest → **inventory** (stack đơn giản).  
-- **Autosave** + load sau khi tắt app.  
-- Input chuột, camera pan/zoom cơ bản.  
-- HUD: thời gian in-game + số item (currency optional).  
-- **Windows standalone** build, không cần transparent.
+- 3 plots, **moisture 0–100%**, **wilt** + **water** (USP — `GAME_BALANCE_SPEC.md`).  
+- **≥1 species**, ≥4 growth stages; time sim 6 pha + **offline cap 24h**.  
+- Harvest → **inventory**; plot empty; plant spore (`US-M2-12`).  
+- **Autosave** + load; schema `Mushrooms/Docs/SaveSchema/v1.md`.  
+- HUD: time + moisture + inventory; FTUE 3–5 bước (`GDD_VOL_01_EXPERIENCE.md`).  
+- **Windows standalone** build; playtest `docs/QA/VS1_PLAYTEST_CHECKLIST.md`.
 
 ### VS2 — Desktop Experience
 
@@ -173,12 +173,13 @@ Phase 0 → M0 → M2 → M3  ═══ VS1
 
 | ID | Công việc | Chi tiết | Tiêu chí hoàn thành |
 | --- | --- | --- | --- |
-| P0-01 | Tạo Unity project | Template **2D URP**, Unity **6000.x LTS**, tên `MushroomDesktop` | Project mở không error đỏ |
+| P0-01 | Unity project | **Done:** `Mushrooms/` URP 2D Unity 6 | Mở Hub không error đỏ |
+| P0-03b | Addressables | Add package trước M4 | manifest |
 | P0-02 | Git + ignore | `.gitignore` Unity chuẩn; commit initial | `git status` sạch sau commit |
 | P0-03 | Packages | URP, Input System, Addressables, Test Framework, Localization (optional install) | Manifest lock |
 | P0-04 | Player settings | Product name, company, default resolution, **Input System active** | Build settings có Standalone Windows |
 | P0-05 | Docs link | `Docs/Architecture/` copy hoặc symlink từ harness | Đọc được architecture trong IDE |
-| P0-06 | Decision record | `docs/decisions/0008-unity6-game-repository.md` | Path + license ghi rõ |
+| P0-06 | Decision record | `docs/decisions/0008-desktop-garden-monorepo-unity6.md` | **Done** |
 | P0-07 | Harness (optional) | `harness init` trong Mushrooms repo nếu dùng story DB | DB tồn tại |
 
 **Không làm trong Phase 0:** gameplay scripts, Win32 plugin, Steam.
@@ -463,6 +464,24 @@ Phase 0 → M0 → M2 → M3  ═══ VS1
 
 ---
 
+#### US-M2-10 — MoistureSystem (Desktop Garden core)
+
+**AC:** Per `MILESTONE_DEEP_SPEC.md` — decay, wilt, growth multiplier, events.
+
+---
+
+#### US-M2-11 — WaterPlotCommand
+
+**AC:** Per deep spec + `GAME_BALANCE_SPEC` waterCanAdd.
+
+---
+
+#### US-M2-12 — PlantSporeCommand
+
+**AC:** Plant empty plot; FTUE free spores flag.
+
+---
+
 ### M2 — Proof
 
 | Test | Mô tả |
@@ -471,6 +490,8 @@ Phase 0 → M0 → M2 → M3  ═══ VS1
 | `Offline_Accrual_Capped` | EditMode |
 | `Save_RoundTrip_PreservesStage` | EditMode hoặc PlayMode |
 | `Save_Atomic_OnCrash` | Manual + optional automated |
+| `Moisture_Decay_And_Wilt` | EditMode |
+| `Water_Plot_Raises_Moisture` | EditMode |
 
 ---
 
@@ -520,12 +541,17 @@ Phase 0 → M0 → M2 → M3  ═══ VS1
 
 **AC:** 1 species readable; không final art bắt buộc.
 
-### VS1 checklist (bạn tick khi review)
+#### US-M3-11 — Moisture & water UX
 
-- [ ] Mở exe, thấy 3 plot và nấm lớn dần (hoặc time scale dev).  
-- [ ] Click harvest, counter inventory tăng.  
-- [ ] Tắt mở lại, stage/inventory giữ.  
-- [ ] Không crash 10 phút idle.
+**AC:** Per `MILESTONE_DEEP_SPEC.md` U1–U4.
+
+#### US-M3-12 — FTUE micro-flow
+
+**AC:** Per `GDD_VOL_01_EXPERIENCE.md` §5.
+
+### VS1 checklist
+
+Use `docs/QA/VS1_PLAYTEST_CHECKLIST.md` (functional + feel).
 
 ---
 
@@ -684,13 +710,13 @@ Phase 0 → M0 → M2 → M3  ═══ VS1
 
 ## 16. Danh mục story đầy đủ
 
-**Tổng:** 10 Phase 0 tasks + **~72 user stories** (US-Mx-xx).
+**Tổng:** Phase 0 tasks + **~76 user stories** (US-Mx-xx). Research: `GAME_PLAN_RESEARCH_AND_GAPS.md`.
 
 | Milestone | Story IDs | Số lượng |
 | --- | --- | --- |
 | M0 | US-M0-01 … US-M0-09 | 9 |
-| M2 | US-M2-01 … US-M2-09 | 9 |
-| M3 | US-M3-01 … US-M3-10 | 10 |
+| M2 | US-M2-01 … US-M2-12 | 12 |
+| M3 | US-M3-01 … US-M3-12 | 12 |
 | M4 | US-M4-01 … US-M4-07 | 7 |
 | M5 | US-M5-01 … US-M5-07 | 7 |
 | M1 | US-M1-01 … US-M1-11 | 11 |

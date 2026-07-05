@@ -1,7 +1,7 @@
 # CONTEXT — Desktop Garden (locked / open decisions)
 
 **Feature slug:** `desktop-garden`  
-**Status:** vision draft — not locked for execution  
+**Status:** pre-production — plan v1.1 supplemented; execution gated on approve vision  
 **Sources:** user vision (modules 1–25, world sim, 250+ mushrooms), `DESKTOP_GARDEN_VISION.md`, `GDD_OUTLINE.md`
 
 ---
@@ -15,7 +15,9 @@
 | L3 | **Implementation:** Services/Systems + asmdef; **không** god Manager list | Architecture doc |
 | L4 | **Ship theo tier** A→D; 250+ species = Tier D target, không VS1 | Scope control |
 | L5 | **Moisture + watering** = core gameplay Tier A | Design pillar |
-| L6 | **Unity 6 LTS, URP 2D, JSON save, Win32 desktop** | Stack decision pending ADR |
+| L6 | **Unity 6 LTS, URP 2D, JSON save, Win32 desktop** | ADR 0008 |
+| L7 | **VS1 includes moisture + water + wilt** | `GAME_BALANCE_SPEC`, US-M2-10/11 |
+| L8 | **Monorepo `Mushrooms/` Unity path** | ADR 0008 |
 
 ---
 
